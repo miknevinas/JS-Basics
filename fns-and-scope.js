@@ -15,9 +15,7 @@ function isTyler(name) {
     }
 }
 
-
-
-isTyler('Tyler');
+isTyler();
 
 //Next problem
 
@@ -26,8 +24,6 @@ isTyler('Tyler');
 
 
   //Code Here
-
-
 function getName() {
     return prompt("What is your name?");
 }
@@ -47,7 +43,7 @@ function welcome() {
     function getName() {
         return prompt("What is your name?");
     }
-    alert("Welcome, " + getName())
+    alert("Welcome, " + getName());
 }
 welcome();
 
@@ -59,8 +55,8 @@ welcome();
 //What is the difference between arguments and parameters?
 
   //Answer Here
-  -parameter: declared inside function
-  -argument: placed inside function caller, fills parameters
+  //-parameter: declared inside function
+  //-argument: placed inside function caller, fills parameters
 
 //Next problem
 
@@ -70,8 +66,8 @@ welcome();
 
 
   //Answer Here
-   -NaN, undefined, null, false, 0
-   -to check if something is falsy: if (condition === false) {}
+   //-NaN, undefined, null, false, 0
+   //-to check if something is falsy: if (condition === false) {}
 
 
 //Next Problem
@@ -85,15 +81,14 @@ welcome();
 function myName() {
     return "Adam";
 }
-myName();
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName();
 
 //Now alert the result of invoking newMyName
-
+alert(newMyName);
 
 //Next problem
 
@@ -102,9 +97,14 @@ myName();
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn() {
+   return function() {
+        return "Adam";
+    }
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+console.log(innerFn);
